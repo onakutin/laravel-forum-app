@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+Route::get('/questions', [QuestionController::class, 'index'])->name('questions.index');
+Route::get('/questions/{question}', [QuestionController::class, 'show'])->name('questions.show');
