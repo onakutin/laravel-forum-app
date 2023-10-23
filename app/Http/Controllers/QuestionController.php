@@ -13,9 +13,9 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $question = Question::query()
-            ->first();
-        dd($question->answers);
+        $questions = Question::query()
+            ->get();
+        // dd($questions);
 
         return view("questions.index", compact("questions"));
     }

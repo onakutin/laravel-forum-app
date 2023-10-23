@@ -23,7 +23,7 @@
             </div>
             <div class="question-right">
                 <div class="question-stat">
-                    <span>{{ $question->answers }}</span>
+                    <span>{{ $question->answers->count() }}</span>
                     <label>responses</label>
                 </div>
             </div>
